@@ -18,7 +18,7 @@ box-sizing:border-box;
 
 .container{
 width:100%;
-max-width:980px;
+max-width:100%; /* Ensure responsiveness in all contexts */
 margin:0 auto;
 padding:24px 16px;
 }
@@ -47,7 +47,8 @@ justify-content:center;
 
 .btn{
 display:inline-block;
-width:min(100%, 720px);
+width:100%; /* Set full width for better responsiveness */
+max-width:720px;
 background:#d4c4ac;
 color:#4d4b36;
 text-decoration:none;
@@ -103,8 +104,7 @@ margin-top:14px;
     <img
       class="hero"
       src="https://raw.githubusercontent.com/profjulian/temporaryimages/main/lectura.png"
-      alt="Lectura">
-
+      alt="Lectura">\n
     <div class="button-area">
       <a
         class="btn"
