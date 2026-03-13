@@ -41,6 +41,7 @@ display:block;
 
 .button-zone{
 margin-top:-60px;
+width:100%;
 }
 
 .button-zone iframe{
@@ -56,23 +57,30 @@ display:block;
 <body>
 
 <div class="wrapper">
-
 <div class="container">
 
 <img src="https://raw.githubusercontent.com/profjulian/temporaryimages/main/lectura.png">
 
 <div class="button-zone">
-
 <iframe
 src="https://profjulian.github.io/temporaryimages/buttoneng.html"
 scrolling="no">
 </iframe>
-
 </div>
 
 </div>
-
 </div>
+
+<script>
+function resizeParentIframe(){
+const height = document.documentElement.scrollHeight;
+if(window.parent){
+window.parent.postMessage({iframeHeight: height}, "*");
+}
+}
+window.addEventListener("load", resizeParentIframe);
+window.addEventListener("resize", resizeParentIframe);
+</script>
 
 </body>
 </html>
